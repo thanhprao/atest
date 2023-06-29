@@ -1,7 +1,6 @@
 ARG PORT=443
 FROM cypress/included:9.5.4
-RUN sed -i s/deb.debian.org/archive.debian.org/g /etc/apt/sources.list
-RUN apt-get install python 3.11.2 -y
+FROM 3.11-bullseye
 RUN echo $(python3 -m site --user--base)
 COPY requirements.txt .
 ENV PATH="$HOME/.local/bin:$PATH"
