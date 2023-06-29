@@ -17,4 +17,4 @@ RUN  apt-get update && apt-get install -y python3-pip && pip install -r requirem
 
 COPY . .
 
-CMD uvicorn app.main:app --host 0.0.0.0 --port 8000
+ENTRYPOINT ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
