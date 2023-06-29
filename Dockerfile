@@ -1,6 +1,7 @@
 ARG PORT=443
 FROM cypress/included:9.5.4
 FROM 3.11-bullseye
+RUN apt-get install python 3.11 -y
 RUN echo $(python3 -m site --user--base)
 COPY requirements.txt .
 ENV PATH="$HOME/.local/bin:$PATH"
