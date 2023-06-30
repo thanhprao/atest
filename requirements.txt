@@ -1,8 +1,6 @@
 
 fastapi==0.80.0
 uvicorn==0.18.3
-watchfiles==0.16.1
-websockets==10.3
 requests==2.28.1
 selenium==4.10.0
 webdriver_manager==3.8.6
